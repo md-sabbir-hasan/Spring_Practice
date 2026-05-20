@@ -28,6 +28,22 @@ public class PoliceStationController {
         return policeStationService.getAll();
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<PoliceStation> getById(@PathVariable Long id){
+        PoliceStation station= policeStationService.getById(id).orElseThrow(() -> new RuntimeException("Police Station Not Found"));
+        return ResponseEntity.ok(station);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteById(
+            @PathVariable Long id) {
+
+        policeStationService.delete(id);
+
+        return ResponseEntity.ok(
+                "Police Station Deleted Successfully"
+        );
+    }
 
 
 }
