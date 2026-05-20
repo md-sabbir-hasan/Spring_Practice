@@ -20,8 +20,8 @@ public class PoliceStationService {
 
     }
 
-    public void saveOrUpdate(PoliceStation p){
-        stationRepository.save(p);
+    public PoliceStation saveOrUpdate(PoliceStation p){
+      return   stationRepository.save(p);
     }
 
     public Optional<PoliceStation> getById(long id){
