@@ -1,10 +1,10 @@
-package com.practice.Random;
+package com.Spring.Practice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RandomApplicationTests {
+class PracticeApplicationTests {
 
 	@Test
 	void contextLoads() {
