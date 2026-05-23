@@ -1,5 +1,6 @@
 package com.Spring.Practice.service;
 
+import com.Spring.Practice.dto.DivisionDTO;
 import com.Spring.Practice.entity.Division;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,8 @@ public interface DivisionService {
     Optional<Division> getById(Integer id);
     void delete(Integer id);
 
-//    List<DivisionDTO> getDivisionsByCountryId(Integer countryId);
-//
-//    List<DivisionDTO> getDivisionsByCountryName(String countryName);
+    List<DivisionDTO> getDivisionsByCountryId(Integer countryId);
+
+    List<DivisionDTO> getDivisionsByCountryName(String countryName);
 
 }
