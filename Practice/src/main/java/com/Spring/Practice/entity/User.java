@@ -1,7 +1,7 @@
 package com.Spring.Practice.entity;
 
+
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +23,6 @@ public class User {
     @Column(unique = true)
     private String phone;
 
-    @Size(max = 20, min = 4)
     private String password;
 
 

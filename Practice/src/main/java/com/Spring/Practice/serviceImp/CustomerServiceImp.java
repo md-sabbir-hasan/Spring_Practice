@@ -31,7 +31,7 @@ public class CustomerServiceImp implements CustomerService {
     @Autowired
     private EmailService emailService;
 
-    @Value("F:/JEE-69/Spring/Code/Spring-69/assets/")
+    @Value("C:/Spring/Spring_Practice")
     private String uploadDir;
 
 
@@ -47,16 +47,15 @@ public class CustomerServiceImp implements CustomerService {
 
 
         User u = new User();
-
         u.setName(c.getName());
         u.setEmail(c.getEmail());
         u.setPhone(c.getPhone());
         u.setPassword(c.getPassword());
         u.setRole("CUSTOMER");
-
         User savedUser = userRepository.save(u);
 
         c.setUser(savedUser);
+
         sendMailToCustomer(c);
         return customerRepository.save(c);
     }
